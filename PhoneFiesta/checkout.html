@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <!-- site metas -->
+    <title>Checkout | PhoneFiesta</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- style css -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css" />
+    <!-- fevicon -->
+    <link rel="icon" href="images/mobile-button-solid(2).svg" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
+    <!-- owl stylesheets -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+        media="screen" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <!-- header top section start -->
+    <div class="header_top_section">
+        <div class="container">
+            <div class="header_main">
+                <div class="location_text">
+                    <img src="images/map-icon.png" /><span class="padding_left_10"><a href="#">Location</a></span>
+                </div>
+                <div class="location_text center">
+                    <img src="images/call-icon.png" /><span class="padding_left_10"><a href="#">Call : +91
+                            9409262827</a></span>
+                </div>
+                <div class="location_text right">
+                    <img src="images/mail-icon.png" /><span class="padding_left_10"><a
+                            href="#">phonefiesta@gmail.com</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header top section end -->
+
+    <!-- header section start -->
+    <div class="header_section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="logo" href="index.html"><i class="fa-solid fa-mobile-button cell"></i><span
+                        id="companyName">PhoneFiesta</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item one active">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="companies.html">Companies</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="products.html">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                      <div class="cart_icon mr-3"><a href="cart.html"><img src="images/cart.png"></a></div>
+                      <div class="cart_icon"><a href="profile.html"><img src="images/user-solid.svg"></a></div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- header section end -->
+
+    <!-- Checkout Section -->
+    <section class="checkout_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h2 class="checkout_title">Checkout</h2>
+                    <div class="checkout_details">
+                        <form id="checkoutForm">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" value="Harsh Bhimjiyani" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" value="bhimjiyaniharsh@gmail.com" />
+                            </div>
+                            <div class="form-group">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="tel" class="form-control" id="phoneNumber" value="+91 9409262827" />
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea class="form-control" id="address" rows="3"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="paymentMethod">Payment Method</label>
+                                <select class="form-control" id="paymentMethod">
+                                    <option value="">Select Payment Method</option>
+                                    <option value="creditCard">Credit Card</option>
+                                    <option value="debitCard">Debit Card</option>
+                                    <option value="paypal">PayPal</option>
+                                    <option value="upi">UPI</option>
+                                    <option value="cash">Cash On Delivery</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary" data-toggle="modal"
+                                data-target="#orderPlacedModal" id="placeOrderBtn">
+                                Place Order
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-md-4 chk_summary">
+                    <div class="cart_summary">
+                        <h3>Order Summary</h3>
+
+                        <!-- <div class="subtotal">
+                            <span>Subtotal:</span>
+                            <span id="subamt">&#8377 99.99</span>
+                        </div>
+                        <div class="gst">
+                            <span>GST (18%):</span>
+                            
+                            <span id="gstamt">$18</span>
+                        </div> -->
+
+                        <div class="total">
+                            <span>Total:</span>
+                            <span id="amt">&#8377 99.99</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="orderPlacedModal" tabindex="-1" role="dialog" aria-labelledby="orderPlacedModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="orderPlacedModalLabel">Order Placed</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Order ID: <span id="orderID"></span></p>
+                    <p><span id="modalTotalAmount"></span>/-</p>
+                    <p>Your order has been successfully placed.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- footer section start -->
+    <div class="footer_section">
+        <div class="container">
+            <div class="footer_location_text">
+                <ul>
+                    <li>
+                        <img src="images/map-icon.png" /><span class="padding_left_10"><a href="#">Location</a></span>
+                    </li>
+                    <li>
+                        <img src="images/call-icon.png" /><span class="padding_left_10"><a href="#">Call : +91
+                                9409262827</a></span>
+                    </li>
+                    <li>
+                        <img src="images/mail-icon.png" /><span class="padding_left_10"><a
+                                href="#">phonefiesta@gmail.com</a></span>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <h2 class="useful_text">Useful link</h2>
+                    <div class="footer_menu">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="products.html">Products</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <h2 class="useful_text">Companies</h2>
+                    <div class="footer_menu">
+                        <ul>
+                            <li><a href="#">Apple</a> | <a href="#">Samsung</a></li>
+                            <li><a href="#">Oneplus</a> | <a href="#">Realme</a></li>
+                            <li><a href="#">Nothing</a> | <a href="#">Oppo</a></li>
+                            <li>
+                                <a href="#">Vivo</a> | <a href="#">MI</a> |
+                                <a href="#">Poco</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <h2 class="useful_text">social media</h2>
+                    <div class="social_icon">
+                        <ul>
+                            <li>
+                                <a href="#"><img src="images/fb-icon.png" /></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/twitter-icon.png" /></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/linkedin-icon.png" /></a>
+                            </li>
+                            <li>
+                                <a href="#"><img src="images/youtub-icon.png" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <h1 class="useful_text">Legal</h1>
+
+                    <div class="footer_menu">
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end info section -->
+    <!-- footer section end -->
+    <!-- copyright section start -->
+    <div class="copyright_section">
+        <div class="container">
+            <p class="copyright_text">
+                &copy; 2024 All Rights Reserved <a href="index.html">PhoneFiesta</a>
+            </p>
+        </div>
+    </div>
+    <!-- copyright section end -->
+
+    <!-- Javascript files-->
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/plugin.js"></script>
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <!-- javascript -->
+    <script src="js/owl.carousel.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+    <!-- JavaScript files -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/cart.js"></script>
+
+    <script>
+        // Retrieve cart items from session storage
+        var cartItems = JSON.parse(sessionStorage.getItem('cartItems'));
+
+        // Display cart items and calculate total dynamically
+        $(document).ready(function () {
+            displayCartItems();
+            calculateTotal();
+        });
+
+        function displayCartItems() {
+            var cartHtml = '';
+            cartItems.forEach(function (item) {
+                cartHtml += '<div class="cart_item">';
+                cartHtml += '<h4>' + item.name + '</h4>';
+                cartHtml += '<p>₹' + item.price.toFixed(2) + '</p>';
+                cartHtml += '</div>';
+            });
+            $('#cartItems').html(cartHtml);
+        }
+
+        function calculateTotal() {
+            var subtotal = cartItems.reduce(function (acc, item) {
+                return acc + item.price;
+            }, 0);
+            var total = subtotal;
+            $('#subtotal').text('₹' + subtotal.toFixed(2));
+            $('#total').text('₹' + total.toFixed(2));
+        }
+
+        // Retrieve cart items from session storage
+        var cartItems = JSON.parse(sessionStorage.getItem('cartItems'));
+
+        // Display cart items and calculate total dynamically
+        $(document).ready(function () {
+            displayCartItems();
+            calculateTotal();
+        });
+
+        function displayCartItems() {
+            var cartHtml = '';
+            cartItems.forEach(function (item) {
+                cartHtml += '<div class="cart_item">';
+                cartHtml += '<h4>' + item.name + '</h4>';
+                cartHtml += '<p>&#8377;' + item.price.toFixed(2) + '</p>';
+                cartHtml += '</div>';
+            });
+            $('#cartItems').html(cartHtml);
+        }
+
+        function calculateTotal() {
+            var subtotal = cartItems.reduce(function (acc, item) {
+                return acc + item.price;
+            }, 0);
+            var total = subtotal;
+            $('#subtotal').text('&#8377;' + subtotal.toFixed(2));
+            $('#total').text('&#8377;' + total.toFixed(2));
+        }
+
+
+        $(document).ready(function () {
+            // Extract the total amount only once
+            var totalAmount = $('.total').text();
+
+            $('#placeOrderBtn').click(function (e) {
+                e.preventDefault();
+                // Use the extracted total amount when placing the order
+                $('#modalTotalAmount').text(totalAmount);
+                $('#orderPlacedModal').modal('show');
+            });
+        });
+
+        $(document).ready(function () {
+            // Extract the total amount only once
+            var totalAmount = $('.total').text();
+
+            $('#placeOrderBtn').click(function (e) {
+                e.preventDefault();
+
+                // Generate a random ID for the order
+                var orderID = generateOrderID();
+
+                // Use the extracted total amount and generated order ID when placing the order
+                $('#modalTotalAmount').text(totalAmount);
+                $('#orderPlacedModal').modal('show');
+
+                // Display the order ID in the modal
+                $('#orderID').text(orderID);
+            });
+
+            // Function to generate a random order ID
+            function generateOrderID() {
+                var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+                var length = 8;
+                var orderID = '';
+                for (var i = 0; i < length; i++) {
+                    orderID += characters.charAt(Math.floor(Math.random() * characters.length));
+                }
+                return orderID;
+            }
+        });
+
+    </script>
+</body>
+
+</html>
